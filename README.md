@@ -13,6 +13,28 @@ Must have a basic knowledge of the following web technologies:
 5. Laravel
 6. SQLite
 
+## Project Setup
+
+```sh
+git clone https://github.com/jude4/chat-app.git
+```
+
+```sh
+npm install
+```
+
+## Run Server
+
+```sh
+php artisan serve
+```
+
+## You can take a look at this now:
+
+```sh
+http://localhost:8000
+```
+
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Chat app, please send an e-mail to Jude via [judeufuomao@gmail.com](mailto:judeufuomao@gmail.com). All security vulnerabilities will be promptly addressed.
