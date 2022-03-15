@@ -1,5 +1,7 @@
 # Realtime Chat App
 
+<img src="https://github.com/jude4/chat-app/blob/master/public/assets/chat-app.PNG" raw=true>
+
 This is a realtime chat app built with Pusher for handling the Websocket infrastructure, laravel for handling the backend, Vuejs for the frontend, SQLite for storing data and TailwindCss for styling.
 
 ## Prerequisite
