@@ -5444,8 +5444,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["messages"]
+  props: ["messages", "user"]
 });
 
 /***/ }),
@@ -35187,27 +35211,66 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "ul",
-    { staticClass: "chat" },
-    _vm._l(_vm.messages, function (message) {
-      return _c("li", { key: message.id, staticClass: "left clearfix" }, [
-        _c("div", { staticClass: "clearfix" }, [
-          _c("div", { staticClass: "header" }, [
-            _c("strong", [
+    "div",
+    {},
+    _vm._l(_vm.messages, function (message, index) {
+      return _c("div", { key: message.id }, [
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: message.user_id != _vm.user.id,
+                expression: "message.user_id != user.id",
+              },
+            ],
+            staticClass: "w-1/2 bg-white shadow-2xl p-4 rounded mb-4",
+          },
+          [
+            _c("p", { staticClass: "font-semibold" }, [
+              _vm._v(_vm._s(message.user.name)),
+            ]),
+            _vm._v(" "),
+            _c("p", [
               _vm._v(
-                "\n                    " +
-                  _vm._s(message.user.name) +
-                  "\n                "
+                "\n                " +
+                  _vm._s(message.message) +
+                  "\n            "
               ),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                " + _vm._s(message.message) + "\n            "
-            ),
-          ]),
-        ]),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: message.user_id == _vm.user.id,
+                expression: "message.user_id == user.id",
+              },
+            ],
+            staticClass:
+              "w-1/2 text-white shadow-2xl mb-4 p-4 rounded ml-auto bg-green-600",
+          },
+          [
+            _c("p", { staticClass: "font-semibold" }, [
+              _vm._v(_vm._s(_vm.user.name)),
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                " +
+                  _vm._s(message.message) +
+                  "\n            "
+              ),
+            ]),
+          ]
+        ),
       ])
     }),
     0

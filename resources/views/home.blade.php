@@ -8,7 +8,12 @@
                 <div class="card-header text-5xl">{{ __('Chats') }}</div>
 
                 <div class="card-body">
-                    <div class="card-header text-2xl bg-white">{{ __('Broadcasts Lists') }}</div>
+                    <div class="flex justify-between">
+                    <div class=" text-2xl bg-white">{{ __('Broadcasts Lists') }}</div>
+                    <a href="/chat" class="text-red-600">Group chat</a>
+                    </div>
+
+                    <hr class="my-2" />
 
                     <div class="chat-card bg-white p-4 ">
                         <div class="flex justify-between shadow-2xl p-4">
