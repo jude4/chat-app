@@ -9,6 +9,17 @@ Vue.component(
     require("./components/ChatMessages.vue").default
 );
 Vue.component("chat-form", require("./components/ChatForm.vue").default);
+Vue.component("chat-card", require("./components/ChatCard.vue").default);
+
+Vue.component(
+    "personal-chat",
+    require("./components/PersonalChat.vue").default
+);
+
+Vue.component(
+    "personal-chat-form",
+    require("./components/PersonalChatForm.vue").default
+);
 
 const app = new Vue({
     el: "#app",
@@ -23,6 +34,17 @@ const app = new Vue({
                 user: e.user,
             });
         });
+
+        window.Echo.private("personal-chat").listen(
+            "PersonalMessageSent",
+            (e) => {
+                this.messages.push({
+                    sender: e.sender,
+                    reciever: e.reciever,
+                    message: e.message.message,
+                });
+            }
+        );
     },
     updated() {
         this.fetchMessages();
@@ -36,6 +58,13 @@ const app = new Vue({
         addMessage(message) {
             this.messages.push(message);
             axios.post("/messages", message).then((response) => {
+                console.log(response.data);
+            });
+        },
+
+        addPersonalMessage(message, reciever) {
+            this.messages.push(message);
+            axios.post("/personal-chats", message, reciever).then((response) => {
                 console.log(response.data);
             });
         },

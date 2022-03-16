@@ -4,12 +4,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card ">
-                <div class="card-header">Chats</div>
+                <div class="card-header">{{ $reciever->name }}</div>
                 <div class="card-body bg-gray-100" style="height: 500px; overflow-y: auto">
-                    <chat-messages :messages="messages" :user="{{ Auth()->user() }}"></chat-messages>
+                    <personal-chat :chats="messages" :user="{{ Auth()->user() }}"></personal-chat>
                 </div>
                 <div class="card-footer">
-                    <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form>
+                    <personal-chat-form v-on:personalMessageSent="addPersonalMessage" :reciever="{{ $reciever }}" :sender="{{ Auth::user() }}"></personal-chat-form>
+
                 </div>
             </div>
 
