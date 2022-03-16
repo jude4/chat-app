@@ -21,8 +21,8 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar md:px-12 navbar-expand-md navbar-light bg-white ">
+            <div class="container md:px-12">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Chat App') }}
                 </a>
