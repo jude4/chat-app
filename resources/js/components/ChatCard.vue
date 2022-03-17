@@ -15,7 +15,7 @@
                         />
                     </div>
                     <div class="chat-info">
-                        <p>{{ chat.reciever.name }}</p>
+                        <p>{{ chat.sender.name }}</p>
                         <p>{{ chat.message }}</p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="ml-6 my-auto">
-                        <a :href="'/personal-chats?id=' + chat.reciever_id">
+                        <a :href="'/personal-chats?id=' + chat.sender_id">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 320 512"

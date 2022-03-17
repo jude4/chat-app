@@ -19,7 +19,7 @@ class PersonalMessageSent implements ShouldBroadcast
     public $sender;
     public $reciever;
     public $message;
-    public function __construct(User $sender, User $reciever, Chat $message)
+    public function __construct($sender, $reciever, Chat $message)
     {
         $this->sender = $sender;
         $this->reciever = $reciever;

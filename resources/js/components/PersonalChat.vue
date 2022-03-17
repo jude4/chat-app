@@ -2,7 +2,7 @@
     <div class="">
         <div v-for="chat in chats" :key="chat.id">
             <div
-                v-show="chat.sender_id != chat.id"
+                v-show="chat.sender_id != user.id"
                 class="md:w-1/2 mr-12 bg-white shadow-2xl p-4 rounded mb-4"
             >
                 <span class="small font-semibold text-gray-500 flex justify-end"

@@ -9,7 +9,7 @@
                     <personal-chat :chats="{{ $chats }}" :user="{{ Auth()->user() }}"></personal-chat>
                 </div>
                 <div class="card-footer">
-                    <personal-chat-form v-on:personalMessageSen="addPersonalMessage" :reciever="{{ $reciever }}" :sender="{{ Auth::user() }}"></personal-chat-form>
+                    <personal-chat-form v-on:personalmessagesent="addPersonalMessage" :reciever="{{ $reciever }}" :sender="{{ Auth::user() }}"></personal-chat-form>
                 </div>
             </div>
 

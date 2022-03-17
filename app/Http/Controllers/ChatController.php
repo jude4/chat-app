@@ -38,7 +38,7 @@ class ChatController extends Controller
         $sender = Auth::user();
         $reciever = $request->reciever;
         $message = $sender->chats()->create([
-            'reciever_id' => $request->reciever->id,
+            'reciever_id' => $reciever['id'],
             'message' => $request->input('message')
         ]);
 
@@ -46,11 +46,10 @@ class ChatController extends Controller
         return ['status' => 'Message Sent!'];
     }
 
-
     public function personalChat(Request $request)
     {
         $reciever = User::find($request->id);
-        $chats = auth()->user()->chats()->with('sender')->get();
+        $chats = auth()->user()->chats()->where('sender_id', $reciever->id)->with('sender')->get();
         return view('personal-chat', compact('reciever', 'chats'));
     }
 }

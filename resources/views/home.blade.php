@@ -15,7 +15,8 @@
 
                     <hr class="my-2" />
 
-                    <chat-card :user="{{ auth()->user() }}" :chats="{{ auth()->user()->recentChats() }}"></chat-card>
+                    <chat-card :user="{{ auth()->user() }}" :chats="{{ auth()->user()->chatRecieved() }}"></chat-card>
+
                 </div>
             </div>
         </div>
