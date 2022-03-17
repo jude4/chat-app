@@ -40,6 +40,6 @@ class User extends Authenticatable
 
     public function recentChats(): mixed
     {
-        return $this->chats()->latest()->get();
+        return $this->chats()->with('reciever')->latest()->get();
     }
 }

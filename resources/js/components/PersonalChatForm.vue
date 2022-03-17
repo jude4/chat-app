@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     sendMessage() {
+      console.log('sending message')
       this.$emit("personalMessageSent", {
         sender: this.sender,
         reciever: this.reciever,

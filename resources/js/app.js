@@ -63,6 +63,7 @@ const app = new Vue({
         },
 
         addPersonalMessage(message, reciever) {
+            // console.log(message)
             this.messages.push(message);
             axios.post("/personal-chats", message, reciever).then((response) => {
                 console.log(response.data);

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 mt-12">
-            <div class="card">
+            <div class="card shadow-2xl">
                 <div class="w-full">
                     <p class="p-4 font-semibold text-3xl text-center">Login to your Chat app</p>
                     <hr class="w-56 mx-auto" />

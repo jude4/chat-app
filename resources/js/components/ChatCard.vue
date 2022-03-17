@@ -15,7 +15,7 @@
                         />
                     </div>
                     <div class="chat-info">
-                        <p>{{ user.name }}</p>
+                        <p>{{ chat.reciever.name }}</p>
                         <p>{{ chat.message }}</p>
                     </div>
                 </div>

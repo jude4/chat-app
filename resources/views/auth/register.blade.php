@@ -3,9 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-5 my-12">
-            <div class="card">
-
+        <div class="col-md-5 my-12 ">
+            <div class="card shadow-2xl">
                 <div class="w-full ">
                     <p class="p-4 font-semibold text-3xl text-center">Create your Chat app account</p>
                     <hr class="w-56 mx-auto" />

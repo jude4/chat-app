@@ -50,6 +50,7 @@ class ChatController extends Controller
     public function personalChat(Request $request)
     {
         $reciever = User::find($request->id);
-        return view('personal-chat', compact('reciever'));
+        $chats = auth()->user()->chats()->with('sender')->get();
+        return view('personal-chat', compact('reciever', 'chats'));
     }
 }
